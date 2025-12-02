@@ -9,3 +9,5 @@ So yeah, nothing special this year, I'm actually delighted it's only 12 days/tas
 So, here we go... 
 
 ## Day 1
+
+Day 1 complete. Took me longer than I'd like to admit, got a bit confused with the math there 😅. But it was a simple enjoyable task, let's see how long that sentiment lasts! 😎

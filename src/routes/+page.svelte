@@ -1,2 +1,4 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<h1>Welcome to Advent of Code 2025</h1>
+<ul>
+	<li><a href="/day1">Day 1</a></li>
+</ul>
