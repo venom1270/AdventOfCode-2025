@@ -3,8 +3,8 @@
 	let part1 = $state(0);
 	let part2 = $state(0);
 
-	let part1Time = $state(0);
-	let part2Time = $state(0);
+	let part1Time = $state('');
+	let part2Time = $state('');
 
 	function processFile(e: Event) {
 		const target = event?.target as HTMLInputElement;

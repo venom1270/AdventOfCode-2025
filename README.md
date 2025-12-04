@@ -11,3 +11,7 @@ So, here we go...
 ## Day 1
 
 Day 1 complete. Took me longer than I'd like to admit, got a bit confused with the math there 😅. But it was a simple enjoyable task, let's see how long that sentiment lasts! 😎
+
+## Day 2
+
+This on was easy. Didn't overhtink too much, did the most obvious naive solution and it works great! 😎 Takes about *100ms* or *0,1s* for part 2, which is good enough.
