@@ -15,3 +15,7 @@ Day 1 complete. Took me longer than I'd like to admit, got a bit confused with t
 ## Day 2
 
 This on was easy. Didn't overhtink too much, did the most obvious naive solution and it works great! 😎 Takes about *100ms* or *0,1s* for part 2, which is good enough.
+
+## Day 3
+
+Fairly easy, no big difficulties, I think I'm getting the hand of this. Spent less time overall than on day 1 and day 2. 😎😅
