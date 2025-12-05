@@ -19,3 +19,7 @@ This on was easy. Didn't overhtink too much, did the most obvious naive solution
 ## Day 3
 
 Fairly easy, no big difficulties, I think I'm getting the hand of this. Spent less time overall than on day 1 and day 2. 😎😅
+
+## Day 4
+
+Quickly did day 4 as well. I was dreading it was gonna be a recursion task, but luckily it wasn't! Very simple. 😀
