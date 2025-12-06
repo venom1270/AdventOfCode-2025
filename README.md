@@ -23,3 +23,7 @@ Fairly easy, no big difficulties, I think I'm getting the hand of this. Spent le
 ## Day 4
 
 Quickly did day 4 as well. I was dreading it was gonna be a recursion task, but luckily it wasn't! Very simple. 😀
+
+## Day 5
+
+Interval sorting done first try! Even I am a bit impressed with myself! 😛 But I think I spent the least time on this day haha. Seems the tasks are getting easier 😎 (*famous last words*)
