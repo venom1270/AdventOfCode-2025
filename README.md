@@ -27,3 +27,11 @@ Quickly did day 4 as well. I was dreading it was gonna be a recursion task, but 
 ## Day 5
 
 Interval sorting done first try! Even I am a bit impressed with myself! 😛 But I think I spent the least time on this day haha. Seems the tasks are getting easier 😎 (*famous last words*)
+
+## Day 6
+
+This was pretty easy, but a bit cubersome. Have praise myself a bit - I did part 2 in first try, ignoring a stupid simple bug I found rather quickly 😎.
+
+## Day 7
+
+I am also kinda proud of this one! I was really contemplating doing recursion for part 2, but in the end managed to come up with a dynamic programming(*?*) solution 😎. Basically you carry a number for how many times the beams overlap all through the simulation like in part 1, and in the end just sum up the numbers (number of overalpping beams)! 😀
