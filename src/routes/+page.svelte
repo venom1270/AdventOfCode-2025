@@ -7,4 +7,9 @@
 	<li><a href="/day5">Day 5</a></li>
 	<li><a href="/day6">Day 6</a></li>
 	<li><a href="/day7">Day 7</a></li>
+	<li><a href="/day8">Day 8</a></li>
+	<li><a href="/day9">Day 9</a></li>
+	<li><a href="/day10">Day 10</a></li>
+	<li><a href="/day11">Day 11</a></li>
+	<li><a href="/day12">Day 12</a></li>
 </ul>

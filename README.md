@@ -35,3 +35,7 @@ This was pretty easy, but a bit cubersome. Have praise myself a bit - I did part
 ## Day 7
 
 I am also kinda proud of this one! I was really contemplating doing recursion for part 2, but in the end managed to come up with a dynamic programming(*?*) solution 😎. Basically you carry a number for how many times the beams overlap all through the simulation like in part 1, and in the end just sum up the numbers (number of overalpping beams)! 😀
+
+## Day 8
+
+I wasted so much time on this one... a bit of unclear part 1 instructions and a bit fiddly with all the things you need to keep track of. Not hard, just a bit tedious (and I don't like those 3D space-like tasks 😅).
