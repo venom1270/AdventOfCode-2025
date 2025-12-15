@@ -39,3 +39,7 @@ I am also kinda proud of this one! I was really contemplating doing recursion fo
 ## Day 8
 
 I wasted so much time on this one... a bit of unclear part 1 instructions and a bit fiddly with all the things you need to keep track of. Not hard, just a bit tedious (and I don't like those 3D space-like tasks 😅).
+
+## Day 9
+
+Part 1 is very easy, but I have no clue for part 2 🤔. Guess I'm leaving it for later 😅.
