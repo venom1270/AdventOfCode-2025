@@ -43,3 +43,8 @@ I wasted so much time on this one... a bit of unclear part 1 instructions and a 
 ## Day 9
 
 Part 1 is very easy, but I have no clue for part 2 🤔. Guess I'm leaving it for later 😅.
+
+## Day 10
+
+Damn, part 2s are giving me a hard time this year! 😅 Only managed to complete part 1 for now, part 2 needs some more wheel-turning optimization. 🤔🤔
+*Part 2 reminds me of the classic "coin" leetcode task, but I forgot the details 😤*
