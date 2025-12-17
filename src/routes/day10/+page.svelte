@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { PriorityQueue } from './pq';
+
 	let data: string = $state('');
 	let part1 = $state(0);
 	let part2 = $state(0);
@@ -91,9 +93,9 @@
 		}
 	}
 
-	function pressButtonJoltage(m: Machine, buttons: number[]): number {
+	function pressButtonJoltage(m: Machine, buttons: number[], numberOfPresses: number) {
 		for (let b of buttons) {
-			m.joltageCounters[b]++;
+			m.joltageCounters[b] += numberOfPresses;
 		}
 	}
 
@@ -119,6 +121,34 @@
 		return true;
 	}
 
+	function isJoltageValid(m: Machine): boolean {
+		for (let i = 0; i < m.joltage.length; i++) {
+			if (m.joltageCounters[i] > m.joltage[i]) return false;
+		}
+		return true;
+	}
+
+	function getAvailablePresses(m: Machine, buttons: number[]): number {
+		/*let c = copy(m);
+
+		let count = 0;
+		while (!isJoltageValid(c)) {
+			for (let b of buttons) {
+				c.joltageCounters[b]++;
+			}
+			count++;
+		}
+		return count - 1;
+		*/
+
+		let min = 9999999;
+		for (let b of buttons) {
+			min = Math.min(min, m.joltage[b] - m.joltageCounters[b]);
+		}
+
+		return min;
+	}
+
 	let rmemo: number[][] = [];
 	function rec(state: State): State | undefined {
 		let m = state.machine;
@@ -136,8 +166,11 @@
 
 		for (const b of m.buttons) {
 			let c = copy(m);
-			pressButtonJoltage(c, b);
-			let r = rec({ machine: c, steps: state.steps + 1 });
+
+			let availablePresses = getAvailablePresses(m, b);
+			let numberOfPresses = availablePresses > 3 ? Math.floor(availablePresses / 2) : 1;
+			pressButtonJoltage(c, b, numberOfPresses);
+			let r = rec({ machine: c, steps: state.steps + numberOfPresses });
 			if (r != undefined) return r;
 		}
 
@@ -191,15 +224,24 @@
 
 		count = 1;
 		for (let machine of machines) {
-			machine.buttons.sort((a, b) => b.length - a.length);
+			/*machine.buttons.sort((a, b) => b.length - a.length);
 			console.log(count++, machine);
 			let r = rec({ machine, steps: 0 });
 			console.log(r);
 			if (r != undefined) {
 				part2 += r.steps;
-			}
+			}*/
 
-			/*while (!done && queue.length > 0) {
+			console.log(count++, machine);
+
+			let queue: State[] = [{ machine, steps: 0 }];
+			//const queue = new PriorityQueue<State>((a, b) => a.steps - b.steps);
+			//queue.enqueue({ machine, steps: 0 });
+			let done = false;
+			let memo: number[][] = [];
+			//while (!done && queue.size() > 0) {
+			while (!done && queue.length > 0) {
+				//const currentState = queue.dequeue()!;
 				const currentState = queue.shift()!;
 				const m = currentState.machine;
 
@@ -217,15 +259,18 @@
 
 				for (let b of m.buttons) {
 					let c = copy(currentState?.machine);
-					pressButtonJoltage(c, b);
+					let availablePresses = getAvailablePresses(m, b);
+					let numberOfPresses = availablePresses > 1 ? Math.floor(availablePresses / 2) : 1;
+					pressButtonJoltage(c, b, numberOfPresses);
 					if (isFinalJoltage(c)) {
 						done = true;
 						part2 += currentState.steps + 1;
 						break;
 					}
-					queue.push({ machine: c, steps: currentState.steps + 1 });
+					//queue.enqueue({ machine: c, steps: currentState.steps + numberOfPresses });
+					queue.push({ machine: c, steps: currentState.steps + numberOfPresses });
 				}
-			}*/
+			}
 		}
 
 		const end2 = performance.now();

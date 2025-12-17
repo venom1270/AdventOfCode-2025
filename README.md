@@ -48,3 +48,7 @@ Part 1 is very easy, but I have no clue for part 2 🤔. Guess I'm leaving it fo
 
 Damn, part 2s are giving me a hard time this year! 😅 Only managed to complete part 1 for now, part 2 needs some more wheel-turning optimization. 🤔🤔
 *Part 2 reminds me of the classic "coin" leetcode task, but I forgot the details 😤*
+
+## Day 11
+
+This was enjoyable. Part 2 was a bit of a head-scratcher, but managed to finish it optimally (I think) 😎. The trick, taht I suspected from the beginning, was to split the search in segments and then just multiplay the number of possible segment paths together! 😀
