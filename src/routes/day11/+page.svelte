@@ -97,8 +97,6 @@
 
 		const start2 = performance.now();
 
-		part2 = findPathsPart2(graph, 'svr', 'out');
-
 		memo = {};
 		let svrToDac = findPathsPart2(graph, 'svr', 'dac');
 		memo = {};

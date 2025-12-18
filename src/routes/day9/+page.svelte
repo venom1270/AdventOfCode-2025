@@ -87,6 +87,50 @@
 		return true;
 	}
 
+	function isPointInside(p: Point, a: Point, b: Point): boolean {
+		let i = false,
+			j = false;
+		if (a.i > b.i) {
+			if (p.i > b.i && p.i < a.i) i = true;
+		} else {
+			if (p.i < b.i && p.i > a.i) i = true;
+		}
+
+		if (a.j > b.j) {
+			if (p.j > b.j && p.j < a.j) j = true;
+		} else {
+			if (p.j < b.j && p.j > a.j) j = true;
+		}
+
+		return i && j;
+	}
+
+	function isLineInside(l1: Point, l2: Point, a: Point, b: Point): boolean {
+		if (l1.i == l2.i) {
+			if (l1.j > l2.j) {
+				for (let x = l2.j; x <= l1.j; x++) {
+					if (isPointInside({ i: l1.i, j: x }, a, b)) return true;
+				}
+			} else {
+				for (let x = l1.j; x <= l2.j; x++) {
+					if (isPointInside({ i: l1.i, j: x }, a, b)) return true;
+				}
+			}
+		} else {
+			if (l1.i > l2.i) {
+				for (let x = l2.i; x <= l1.i; x++) {
+					if (isPointInside({ i: x, j: l1.j }, a, b)) return true;
+				}
+			} else {
+				for (let x = l1.i; x <= l2.i; x++) {
+					if (isPointInside({ i: x, j: l1.j }, a, b)) return true;
+				}
+			}
+		}
+
+		return false;
+	}
+
 	function solve() {
 		solving = true;
 		part1 = 0;
@@ -99,8 +143,8 @@
 		const start1 = performance.now();
 
 		let biggestArea = 0;
-		let p1: Point;
-		let p2: Point;
+		let p1: Point = { i: 0, j: 0 };
+		let p2: Point = { i: 0, j: 0 };
 		for (let i = 0; i < points.length; i++) {
 			for (let j = i + 1; j < points.length; j++) {
 				const area = calculateArea(points[i], points[j]);
@@ -123,10 +167,31 @@
 		for (let i = 0; i < points.length; i++) {
 			for (let j = i + 1; j < points.length; j++) {
 				const area = calculateArea(points[i], points[j]);
-				if (area > biggestArea && trace(points, i, j)) {
-					biggestArea = area;
-					p1 = points[i];
-					p2 = points[j];
+				if (area <= biggestArea) continue;
+				let p1_tmp = points[i];
+				let p2_tmp = points[j];
+				// CHeck if area valid - if line pierces the area, it's not good
+				let ok = true;
+				for (let k = 0; k < points.length; k++) {
+					//if (k == i || k + 1 == i || k == j || k + 1 == j) continue;
+					let l1 = points[k];
+					let l2;
+					if (k + 1 == points.length) l2 = points[0];
+					else l2 = points[k + 1];
+
+					if (isLineInside(l1, l2, p1_tmp, p2_tmp)) {
+						// != inside2) {
+						// Line intersects!! NOT OK!
+						ok = false;
+						break;
+					}
+				}
+				if (ok) {
+					if (area > biggestArea) {
+						biggestArea = area;
+						p1 = p1_tmp;
+						p2 = p2_tmp;
+					}
 				}
 			}
 		}
