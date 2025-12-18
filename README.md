@@ -53,4 +53,4 @@ Damn, part 2s are giving me a hard time this year! 😅 Only managed to complete
 
 ## Day 11
 
-This was enjoyable. Part 2 was a bit of a head-scratcher, but managed to finish it optimally (I think) 😎. The trick, taht I suspected from the beginning, was to split the search in segments and then just multiplay the number of possible segment paths together! 😀
+This was enjoyable. Part 2 was a bit of a head-scratcher, but managed to finish it optimally (I think) 😎. The trick, that I suspected from the beginning, was to split the search in segments and then just multiply the number of possible segment paths together! 😀
