@@ -44,7 +44,7 @@ I wasted so much time on this one... a bit of unclear part 1 instructions and a 
 
 Part 1 is very easy, but I have no clue for part 2 🤔. Guess I'm leaving it for later 😅.
 
-** UPDATE 18.12.2025**: Managed to solve it with crucial help from [@nsk4](https://github.com/nsk4)! The trick was to just check all pairs of points and see if any point on the lines is inside the proposed square, in which case it's not valid! The solution takes a bit of time, ~10+ seconds, but it's fine!
+**UPDATE 18.12.2025**: Managed to solve it with crucial help from [@nsk4](https://github.com/nsk4)! The trick was to just check all pairs of points and see if any point on the lines is inside the proposed square, in which case it's not valid! The solution takes a bit of time, ~10+ seconds, but it's fine!
 
 ## Day 10
 
